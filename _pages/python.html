@@ -11,7 +11,7 @@ author_profile: true
 {% if site.python_category %}
   {% for category in site.python_category %}
     {% assign title_shown = false %}
-    {% for post in site.python reversed %}
+    {% for post in site.python %}
       {% if post.category != category[0] %}
         {% continue %}
       {% endif %}
@@ -23,7 +23,7 @@ author_profile: true
     {% endfor %}
   {% endfor %}
 {% else %}
-  {% for post in site.python reversed %}
+  {% for post in site.python %}
     {% include archive-single.html %}
   {% endfor %}
 {% endif %}
